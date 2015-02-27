@@ -7,7 +7,7 @@ Ruby Api client for Stripe ACH
 ### Usage
 add to gemfile
 ```ruby
-    gem 'stripe_ach_ruby', git: 'https://github.com/javidan/stripe_ach_ruby'
+gem 'stripe_ach_ruby', git: 'https://github.com/javidan/stripe_ach_ruby'
 ```
 
 Example usage
@@ -35,35 +35,35 @@ list = StripeAch::BankAccount::list(customer_id)
 #### Get bank account
 
 ```ruby
-    StripeAch::BankAccount::get(customer_id, bank_account_id)
+StripeAch::BankAccount::get(customer_id, bank_account_id)
 ```
 
 #### Delete bank account
 ```ruby
-    StripeAch::BankAccount::delete(customer_id, bank_account_id)
+StripeAch::BankAccount::delete(customer_id, bank_account_id)
 ```
 
 #### Add bank account
 ```ruby
-    StripeAch::BankAccount::add(customer_id, account_number, routing_number, country)
+StripeAch::BankAccount::add(customer_id, account_number, routing_number, country)
 ```
 
 **country** is optional, default: 'us'
 
 #### Update metadata on bank account
 ```ruby
-     StripeAch::BankAccount::updata_metadata(customer_id, bank_account_id, :hello=>'world')
+StripeAch::BankAccount::updata_metadata(customer_id, bank_account_id, :hello=>'world')
 ```
 
 #### Verify bank account
 
 ```ruby
-    StripeAch::BankAccount::verify(customer_id, bank_account_id, amount1, amount2)
+StripeAch::BankAccount::verify(customer_id, bank_account_id, amount1, amount2)
 ```
 
 #### Create payment
 ```ruby
-    StripeAch::Payment::create(customer_id, bank_account_id, amount_in_cents, currency)
+StripeAch::Payment::create(customer_id, bank_account_id, amount_in_cents, currency)
  ```
 
  **currency** is optional, default is **'usd'**
