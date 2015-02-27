@@ -6,8 +6,8 @@ require './lib/actions/payment.rb'
 
 
 
-StripeAch::api_key = 'sk_test_4YSYfzjIVYUYVJZuVTX85zcn'
-customer_id = 'cus_5m4acXkvde3dZA'
+StripeAch::api_key = 'bla bla bla'
+customer_id = 'bla bla bla'
 
 
 list = StripeAch::BankAccount::list(customer_id)

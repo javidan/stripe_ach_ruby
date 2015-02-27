@@ -1,4 +1,4 @@
-require 'stripe_ach_ruby/rest_client'
+require 'rest_client'
 require 'stripe_ach_ruby/errors.rb'
 require 'stripe_ach_ruby/util.rb'
 require 'stripe_ach_ruby/actions/bank_account.rb'
