@@ -22,12 +22,12 @@ module StripeAch
     end
 
 
-    def hash_to_ostruct(hash, options = {})
+    def self.hash_to_ostruct(hash, options = {})
       convert_to_ostruct_recursive(hash, options)
     end
        
   private
-    def convert_to_ostruct_recursive(obj, options)
+    def self.convert_to_ostruct_recursive(obj, options)
       result = obj
       if result.is_a? Hash
         result = result.dup.with_sym_keys
