@@ -2,7 +2,7 @@
 
 Ruby Api client for Stripe ACH
 
-[https://gist.github.com/raycmorgan/166e899cbb359768ad29](For Api documentation check here) 
+[For Api documentation check here](https://gist.github.com/raycmorgan/166e899cbb359768ad29) 
 
 ### Usage
 add to gemfile
