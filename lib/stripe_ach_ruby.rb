@@ -137,7 +137,7 @@ module StripeAch
     rescue JSON::ParserError
       raise general_api_error(response.code, response.body)
     end
-      Util.hash_to_ostruct(Util.symbolize_names(response))
+      Util.symbolize_names(response)
   end
 
 end
