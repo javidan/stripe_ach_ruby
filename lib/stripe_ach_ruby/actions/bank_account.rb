@@ -28,7 +28,7 @@ module StripeAch
       StripeAch::request(url, :post, account_details)
     end
 
-    def self.add_by_token(token)
+    def self.add_by_token(customer_id, token)
 
       url = Util.url('customers', customer_id, 'bank_accounts')
 

@@ -50,7 +50,7 @@ StripeAch::BankAccount::add(customer_id, account_number, routing_number, country
 
 You can also add bank account by Stripe token
 ```ruby
-StripeAch::BankAccount::add_by_token(token)
+StripeAch::BankAccount::add_by_token(customer_id, token)
 ```
 
 **country** is optional, default: 'us'
