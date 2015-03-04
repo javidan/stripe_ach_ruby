@@ -130,14 +130,14 @@ module StripeAch
   end
 
   def self.parse(response)
-  begin
-    # Would use :symbolize_names => true, but apparently there is
-    # some library out there that makes symbolize_names not work.
-    response = JSON.parse(response.body)
-  rescue JSON::ParserError
-    raise general_api_error(response.code, response.body)
-  end
-    Util.symbolize_names(response)
+    begin
+      # Would use :symbolize_names => true, but apparently there is
+      # some library out there that makes symbolize_names not work.
+      response = JSON.parse(response.body)
+    rescue JSON::ParserError
+      raise general_api_error(response.code, response.body)
+    end
+      Util.hash_to_ostruct(Util.symbolize_names(response))
   end
 
 end
