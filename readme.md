@@ -48,6 +48,11 @@ StripeAch::BankAccount::delete(customer_id, bank_account_id)
 StripeAch::BankAccount::add(customer_id, account_number, routing_number, country)
 ```
 
+You can also add bank account by Stripe token
+```ruby
+StripeAch::BankAccount::add_by_token(token)
+```
+
 **country** is optional, default: 'us'
 
 #### Update metadata on bank account

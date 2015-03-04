@@ -28,6 +28,17 @@ module StripeAch
       StripeAch::request(url, :post, account_details)
     end
 
+    def self.add_by_token(token)
+
+      url = Util.url('customers', customer_id, 'bank_accounts')
+
+      account_details = {
+        'bank_account'=> token
+      }
+
+      StripeAch::request(url, :post, account_details)
+    end
+
     def self.updata_metadata(customer_id, bank_account_id, metadata)
       url = Util.url('customers', customer_id, 'bank_accounts', bank_account_id)
       result = {}
