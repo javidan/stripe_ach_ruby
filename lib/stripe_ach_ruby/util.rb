@@ -28,13 +28,9 @@ module StripeAch
 
        
   private
-    def self.hash_with_sym_keys(hash)
-      hash.inject({}) { |memo, (k,v)| memo[k.to_sym] = v; memo }
-    end 
     def self.convert_to_ostruct_recursive(obj, options)
       result = obj
       if result.is_a? Hash
-        #result = hash_with_sym_keys(result.dup)
         result.each do |key, val|
         result[key] = convert_to_ostruct_recursive(val, options) unless options[:exclude].try(:include?, key)
       end
