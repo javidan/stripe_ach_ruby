@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/javidan/stripe_ach_ruby'
 
 
-  s.add_dependency('rest-client', '~> 1.8')
+  s.add_dependency('rest-client', '~> 1.7')
   s.add_dependency('json', '~> 1.8.1')
   
   s.license       = 'MIT'
