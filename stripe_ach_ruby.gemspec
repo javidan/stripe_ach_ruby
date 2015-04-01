@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'stripe_ach_ruby'
-  s.version     = '0.1.4'
+  s.version     = '0.1.5'
   s.date        = '2014-02-28'
   s.summary     = "Stripe ACH ruby client"
   s.description = "This is a client for Stripe ACH interface"

@@ -68,7 +68,8 @@ StripeAch::BankAccount::verify(customer_id, bank_account_id, amount1, amount2)
 
 #### Create payment
 ```ruby
-StripeAch::Payment::create(customer_id, bank_account_id, amount_in_cents, currency)
+StripeAch::Payment::create(customer_id, bank_account_id, amount_in_cents, currency, metadata)
  ```
 
  **currency** is optional, default is **'usd'**
+ **metadata** is optional, default is empty
