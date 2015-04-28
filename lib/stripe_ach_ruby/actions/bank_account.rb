@@ -51,8 +51,8 @@ module StripeAch
       url = Util.url('customers', customer_id, 'bank_accounts', bank_account_id, 'verify')
 
       verification_details = {
-        'amounts[]'=> amount1,
-        'amounts[]'=> amount2
+        'amounts[0]'=> amount1,
+        'amounts[1]'=> amount2
       }
 
       StripeAch::request(url, :post, verification_details)
